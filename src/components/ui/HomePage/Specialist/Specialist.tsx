@@ -37,7 +37,7 @@ const Specialist = async () => {
         </Box>
 
         <Stack direction="row" gap={5} mt={5}>
-          {specialities.map((speciality: TSpecialist) => (
+          {specialities.slice(0, 6).map((speciality: TSpecialist) => (
             <Box
               key={speciality.id}
               sx={{
@@ -75,9 +75,14 @@ const Specialist = async () => {
             </Box>
           ))}
         </Stack>
-        <Button variant="outlined" sx={{
-            marginTop: "30px"
-        }}>View All</Button>
+        <Button
+          variant="outlined"
+          sx={{
+            marginTop: "30px",
+          }}
+        >
+          View All
+        </Button>
       </Box>
     </Container>
   );
